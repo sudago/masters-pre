@@ -1,8 +1,26 @@
 package week2.algorism;
 
+//// 간단한 풀이
+//public class Divisor {
+//    public static void main(String[] args) {
+//        int[] arr = {2, 36, 1, 3};
+//        int divisor = 1;
+//
+//        // filter까지만 하면, 자료형은 IntStream이 된다.
+//        // 그래서 toArray()를 해줘야 한다.
+//        int[] answer = Arrays.stream(arr).filter(e -> e % divisor == 0).toArray();
+////        System.out.println(Arrays.toString(answer)); 잘 입력 되었는지 확인.
+//        // 처음 선언할 때 처럼 {-1}만 하면 안되고, new int[]라고 선언해서 초기화를 해줘야 함.
+//        if (answer.length == 0) answer = new int[] {-1};
+//        // Arrays 클래스 안에 있는 sort 메서드를 사용.
+//        java.util.Arrays.sort(answer);
+//        System.out.println(Arrays.toString(answer));
+//    }
+//}
+
+
 import java.util.ArrayList;
 import java.util.Arrays;
-
 
 // 시간 복잡도 O(n log n)생각해서 퀵정렬로 푼 풀이.
 public class Divisor {
