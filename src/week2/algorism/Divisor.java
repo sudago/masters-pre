@@ -1,24 +1,56 @@
 package week2.algorism;
 
 //// 간단한 풀이
-//public class Divisor {
-//    public static void main(String[] args) {
-//        int[] arr = {2, 36, 1, 3};
-//        int divisor = 1;
-//
-//        // filter까지만 하면, 자료형은 IntStream이 된다.
-//        // 그래서 toArray()를 해줘야 한다.
-//        int[] answer = Arrays.stream(arr).filter(e -> e % divisor == 0).toArray();
-////        System.out.println(Arrays.toString(answer)); 잘 입력 되었는지 확인.
-//        // 처음 선언할 때 처럼 {-1}만 하면 안되고, new int[]라고 선언해서 초기화를 해줘야 함.
-//        if (answer.length == 0) answer = new int[] {-1};
-//        // Arrays 클래스 안에 있는 sort 메서드를 사용.
-//        java.util.Arrays.sort(answer);
-//        System.out.println(Arrays.toString(answer));
-//    }
-//}
+/*
+public class Divisor {
+    public static void main(String[] args) {
+        int[] arr = {2, 36, 1, 3};
+        int divisor = 1;
 
+        // filter까지만 하면, 자료형은 IntStream이 된다.
+        // 그래서 toArray()를 해줘야 한다.
+        int[] answer = Arrays.stream(arr).filter(e -> e % divisor == 0).toArray();
+//        System.out.println(Arrays.toString(answer)); 잘 입력 되었는지 확인.
+        // 처음 선언할 때 처럼 {-1}만 하면 안되고, new int[]라고 선언해서 초기화를 해줘야 함.
+        if (answer.length == 0) answer = new int[] {-1};
+        // Arrays 클래스 안에 있는 sort 메서드를 사용.
+        java.util.Arrays.sort(answer);
+        System.out.println(Arrays.toString(answer));
+    }
+}
+ */
 
+// 위 보다 속도가 빠른 풀이.
+/*
+    public int[] solution(int[] arr, int divisor) {
+        int count = 0;
+        int[] answer;
+
+        for (int i=0; i<arr.length; i++) {
+            if (arr[i]%divisor==0) {
+                count++;
+            }
+        }
+
+        if (count==0) {
+            answer = new int[1];
+            answer[0] = -1;
+        } else {
+            answer = new int[count];
+            int inputCount = 0;
+            for (int i=0; i<arr.length; i++) {
+                if (arr[i]%divisor==0) {
+                    answer[inputCount] = arr[i];
+                    inputCount ++;
+                }
+            }
+
+            Arrays.sort(answer);
+        }
+
+        return answer;
+    }
+ */
 import java.util.ArrayList;
 import java.util.Arrays;
 
