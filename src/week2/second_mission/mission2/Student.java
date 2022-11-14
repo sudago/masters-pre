@@ -25,9 +25,10 @@ public class Student {
     }
 
     public String getStudentInfo() {
-        return (studentName + "\t" + studentID + "\t" + majorSubject + "\t"
-                + Integer.toString(subject.getKoreanScore()) + "\t" + Integer.toString(subject.getMathScore()) + "\t"
-                + Integer.toString(subject.getEnglishScore())) + "\n";
+        return (studentName + "\t" + studentID + " " + majorSubject + "\t"
+                + Integer.toString(subject.getKoreanScore() == -1 ? 0 : subject.getKoreanScore()) + "\t"
+                + Integer.toString(subject.getMathScore() == -1 ? 0 : subject.getMathScore()) + "\t"
+                + Integer.toString(subject.getEnglishScore() == -1 ? 0 : subject.getEnglishScore())) + "\n";
     }
 
     public void showStudentInfo(){
