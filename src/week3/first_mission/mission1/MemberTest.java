@@ -2,10 +2,10 @@ package week3.first_mission.mission1;
 
 public class MemberTest {
     public static void main(String[] args) {
-        RedMember james = new RedMember("James", 2);
-        RedMember tomas = new RedMember("Tomas", 2);
-        PlatinumMember edward = new PlatinumMember("Edward", 2);
-        PlatinumMember percy = new PlatinumMember("Percy", 2);
+        Member james = new RedMember("James", 2);
+        Member tomas = new RedMember("Tomas", 2);
+        Member edward = new PlatinumMember("Edward", 2);
+        Member percy = new PlatinumMember("Percy", 2);
         DiamondMember elizabet = new DiamondMember("Elizabet", 2);
         System.out.println("========================================================");
         System.out.println(james.showMemberInfo(10000));
