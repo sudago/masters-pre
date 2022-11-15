@@ -19,7 +19,7 @@ public class Member {
         initMember();
     }
 
-    private void initMember(){
+    private void initMember(){ // 생성자에만 호출하는 메서드
         memberGrade = "None";
         bonusRatio = 0;
         parkingFee = 3000; // 그냥 멤버에는 주차요금 어카징..
