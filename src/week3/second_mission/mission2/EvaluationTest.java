@@ -12,7 +12,7 @@ public class EvaluationTest {
         Student kim = new Student("김유신", 212330, "컴퓨터공학과",
                 "수학", 95, 98);
         Student shin = new Student("신사임당", 201518, "국어국문학과",
-                "국어", 100, 98);
+                "국어", 100, 88);
         Student lee = new Student("이순신", 202360, "국어국문학과",
                 "국어", 89, 95);
         Student hong = new Student("홍길동", 201290,"컴퓨터공학과",
