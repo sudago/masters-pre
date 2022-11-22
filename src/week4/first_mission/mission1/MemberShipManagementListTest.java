@@ -1,13 +1,14 @@
 package week4.first_mission.mission1;
 
+import week4.first_mission.mission1.arraylist.GRADE;
 import week4.first_mission.mission1.arraylist.MemberShipManagementList;
 
 public class MemberShipManagementListTest {
     public static void main(String[] args) {
         MemberShipManagementList management = new MemberShipManagementList();
-        management.addMemberShip(1001, "Hong", "GRADE.RED");
-        management.addMemberShip(1002, "Park", "GRADE.PLATINUM");
-        management.addMemberShip(1003, "Kim", "GRADE.DIAMOND");
+        management.addMemberShip(1001, "Hong", GRADE.RED);
+        management.addMemberShip(1002, "Park", GRADE.PLATINUM);
+        management.addMemberShip(1003, "Kim", GRADE.DIAMOND);
 
         System.out.println("모든 멤버 보여주기: ");
         management.showAllMember();
