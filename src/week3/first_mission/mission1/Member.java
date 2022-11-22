@@ -19,16 +19,21 @@ public class Member {
         this.stayHour = stayHour;
         initMember();
     }
-    public Member (int memberId, String memberName) {
-        this.memberId = memberId;
-        this.memberName = memberName;
-    }
     private void initMember(){
         memberGrade = "None";
         bonusRatio = 0;
         parkingFee = 3000; // 그냥 멤버에는 주차요금 어카징..
     }
+
     // 4주차 미션 추가 구현
+    public void setMemberId(int memberId){
+        this.memberId = memberId;
+    }
+
+    public void setMemberName(String memberName){
+        this.memberName = memberName;
+    }
+
     public int getMemberId(){
         return memberId;
     }

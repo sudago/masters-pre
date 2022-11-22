@@ -8,9 +8,6 @@ public class PlatinumMember extends Member{
         parkingFee = 1000;
         discountRatio = 0.05;
     }
-    // 4주차 미션 1-1을 위한 추가 구현
-    public PlatinumMember(int memberId, String memberName) {
-        super(memberId, memberName);
-        memberGrade = "PLATINUM";
-    }
+
+    public PlatinumMember(){ memberGrade = "PLATINUM";};
 }
