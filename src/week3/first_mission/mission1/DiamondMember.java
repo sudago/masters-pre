@@ -9,4 +9,10 @@ public class DiamondMember extends Member{
         parkingFee = 0;
         discountRatio = 0.1;
     }
+
+    // 4주차 미션 1-1을 위한 추가 구현
+    public DiamondMember(int memberId, String memberName) {
+        super(memberId, memberName);
+        memberGrade = "DIAMOND";
+    }
 }
