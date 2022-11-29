@@ -1,4 +1,4 @@
-package week4.first_mission.mission2;
+package week4.first_mission.mission3;
 
 import week3.first_mission.mission1.DiamondMember;
 import week3.first_mission.mission1.Member;
@@ -7,11 +7,11 @@ import week3.first_mission.mission1.RedMember;
 
 import java.util.HashSet;
 
-public class MemberShipManagementSet {
+public class MemberShipManagementMap {
     private HashSet<Member> hashSet;
     private Member member;
 
-    public MemberShipManagementSet(){this.hashSet = new HashSet<Member>();}
+    public MemberShipManagementMap(){this.hashSet = new HashSet<Member>();}
 
     public void addMemberShip(int memberId, String memberName, String memberShip){
         /* GRADE 클래스의 인스턴스 변수에 new 생성자 사용시.
@@ -34,11 +34,11 @@ public class MemberShipManagementSet {
         // Member 클래스에서 equals()와 hashCode() Override 재정의 했더니 문제 해결.
         hashSet.add(member);
 
-        if (hashSet.add(member)) { // 일치하는 멤버가 없으면 추가.
-            hashSet.add(member);
-        } else { // 일치하는 멤버가 있으면 추가 못함.
-            System.out.println("이미 있는 아이디 " + memberId + "는 추가할 수 없습니다.");
-        }
+//        if (hashSet.add(member)) { // 일치하는 멤버가 없으면 추가.
+//            hashSet.add(member);
+//        } else { // 일치하는 멤버가 있으면 추가 못함.
+//            System.out.println("이미 있는 아이디 " + memberId + "는 추가할 수 없습니다.");
+//        }
     }
 
     public void showAllMember(){
