@@ -38,9 +38,26 @@ public class Member {
         return memberId;
     }
 
+    // Object 클래스의 오버라이드
     @Override
     public String toString(){
         return memberName + "님의 아이디는 " + Integer.toString(memberId) + "이고 등급은 " + memberGrade + "입니다.";
+    }
+
+    @Override
+    public boolean equals(Object o) { // memberId가 같으면 같은 인스턴스로 재정의.
+        if (o instanceof Member) {
+            Member member = (Member) o;
+            if (member.memberId == this.memberId) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode() { // 주소값이 아니라 memberId가 반환되도록 재정의.
+        return memberId;
     }
 
     public int calcPrice(int shoppingPrice) {
