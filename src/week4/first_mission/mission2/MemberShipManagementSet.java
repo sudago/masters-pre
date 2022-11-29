@@ -32,7 +32,6 @@ public class MemberShipManagementSet {
 
         // 인스턴스를 추가했는데, hashSet으로 아이디, 이름이 완전히 똑같은 Member를 넣어도 추가되는게 문제임.
         // Member 클래스에서 equals()와 hashCode() Override 재정의 했더니 문제 해결.
-        hashSet.add(member);
 
         if (hashSet.add(member)) { // 일치하는 멤버가 없으면 추가.
             hashSet.add(member);
