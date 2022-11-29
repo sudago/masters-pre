@@ -1,7 +1,6 @@
 package week4.first_mission.mission1;
 
-import week4.first_mission.mission1.arraylist.GRADE;
-import week4.first_mission.mission1.arraylist.MemberShipManagementList;
+import week4.first_mission.GRADE;
 
 public class MemberShipManagementListTest {
     public static void main(String[] args) {

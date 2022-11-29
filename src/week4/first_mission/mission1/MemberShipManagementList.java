@@ -1,6 +1,9 @@
-package week4.first_mission.mission1.arraylist;
+package week4.first_mission.mission1;
 
+import week3.first_mission.mission1.DiamondMember;
 import week3.first_mission.mission1.Member;
+import week3.first_mission.mission1.PlatinumMember;
+import week3.first_mission.mission1.RedMember;
 
 import java.util.ArrayList;
 
@@ -12,8 +15,15 @@ public class MemberShipManagementList {
         arrayList =  new ArrayList<Member>();
     }
 
-    public void addMemberShip(int memberId, String memberName, Member member) {
-        this.member = member;
+    public void addMemberShip(int memberId, String memberName, String memberShip) {
+        // 인스턴스 추가를 위한 코드 수정. 아래의 코드는 GRADE 클래스 안에 new 생성자를 사용하지 않음.
+        if (memberShip.equals("Red")) {
+            member = new RedMember();
+        } else if (memberShip.equals("Platinum")) {
+            member = new PlatinumMember();
+        } else if (memberShip.equals("Diamond")) {
+            member = new DiamondMember();
+        }
         member.setMemberId(memberId);
         member.setMemberName(memberName);
         arrayList.add(member);
