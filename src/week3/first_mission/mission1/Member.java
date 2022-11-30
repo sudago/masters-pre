@@ -1,6 +1,6 @@
 package week3.first_mission.mission1;
 
-public class Member {
+public class Member implements Comparable<Member> {
     protected int memberId; // 4주차 미션 추가 구현
     protected String memberName;
     protected String memberGrade;
@@ -38,7 +38,7 @@ public class Member {
         return memberId;
     }
 
-    // Object 클래스의 오버라이드
+    // Object 클래스의 오버라이드 (HashSet)
     @Override
     public String toString(){
         return memberName + "님의 아이디는 " + Integer.toString(memberId) + "이고 등급은 " + memberGrade + "입니다.";
@@ -64,6 +64,17 @@ public class Member {
         bonusPoint += shoppingPrice * bonusRatio; // 보너스 포인트 계산
         parkingFee *= stayHour; // 주차요금 계산
         return (shoppingPrice - (int)(shoppingPrice * discountRatio)); // 결제금액 계산
+    }
+
+    // TreeSet을 위한 String 클래스 compare 메서드 재정의
+    @Override
+    public int compareTo(Member member) {
+        // memberName을 기준으로 정렬 시 (오름차순)
+        // return (this.memberName.compareTo(member.memberName));
+
+        //memberId를 기준으로 정렬
+        // 양수 출력 시, 오름차순 정렬
+        return (this.memberId - member.memberId);
     }
 
     public String showMemberInfo(int shoppingPrice){
