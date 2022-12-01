@@ -30,7 +30,7 @@ public class MemberShipManagementMap {
         member.setMemberId(memberId);
         member.setMemberName(memberName);
 
-        // key값이 이미 들어있는지 확인
+        // key값이 이미 들어있는지 확인, value 변경
         if(hashMap.containsKey(memberId)) {
             System.out.println("이미 있는 아이디 " + memberId + "의 값이 변경됩니다.");
         }
@@ -46,7 +46,7 @@ public class MemberShipManagementMap {
             int key = ir.next();
 
             Member member = hashMap.get(key);
-            System.out.println(member);
+            System.out.println(member); // Member 클래스의 toString() 메서드가 호출 됨.
         }
         System.out.println("================================");
     }

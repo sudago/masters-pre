@@ -30,7 +30,7 @@ public class MemberShipManagementMapTest {
 
         management.showAllMember();
 
-        
+
         management.addMemberShip(1003, "Song", GRADE.DIAMOND);
         management.showAllMember();
     }
